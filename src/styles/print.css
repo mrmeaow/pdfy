@@ -1,0 +1,185 @@
+@media print {
+  /* Reset viewport constraints so content flows to full length */
+  html,
+  body,
+  #root {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Hide non-content UI */
+  .topbar,
+  .editor-pane,
+  .resize-handle {
+    display: none !important;
+  }
+
+  /* Override the flex layout that constrains height */
+  #root > div {
+    height: auto !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  /* Override react-resizable-panels inline styles */
+  /* Group sets display:flex and fixed dimensions via inline styles */
+  [data-group] {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  [data-group] > [data-panel] {
+    flex: none !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  /* Preview pane takes full width, auto height, no scroll container */
+  .preview-pane {
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    position: static !important;
+    flex: none !important;
+  }
+
+  /* The preview scroll wrapper must also be unconstrained */
+  .preview-pane > div {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .preview-content {
+    padding: 0 !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  /* Page break control */
+  pre,
+  .markdown-alert,
+  .mermaid-rendered,
+  table {
+    break-inside: avoid;
+  }
+
+  h1, h2, h3 {
+    break-after: avoid;
+  }
+
+  img {
+    break-inside: avoid;
+    max-width: 100% !important;
+  }
+
+  /* Force light background for printing */
+  body {
+    background: white !important;
+    color: #1f2328 !important;
+  }
+
+  .preview-content,
+  .preview-content h1,
+  .preview-content h2,
+  .preview-content h3,
+  .preview-content h4,
+  .preview-content h5,
+  .preview-content h6,
+  .preview-content strong,
+  .preview-content p,
+  .preview-content li,
+  .preview-content td,
+  .preview-content th {
+    color: #1f2328 !important;
+  }
+
+  .preview-content a {
+    color: #0969da !important;
+  }
+
+  .preview-content blockquote {
+    color: #656d76 !important;
+    border-left-color: #d1d9e0 !important;
+    background: #f6f8fa !important;
+  }
+
+  .preview-content h1,
+  .preview-content h2 {
+    border-bottom-color: #d1d9e0 !important;
+  }
+
+  .preview-content pre {
+    background: #f6f8fa !important;
+    border-color: #d1d9e0 !important;
+  }
+
+  .preview-content code {
+    background: #f6f8fa !important;
+  }
+
+  .preview-content table th,
+  .preview-content table td {
+    border-color: #d1d9e0 !important;
+  }
+
+  .preview-content table th,
+  .preview-content table tr:nth-child(even) {
+    background: #f6f8fa !important;
+  }
+
+  /* Ensure code blocks and callouts print with background colors */
+  pre,
+  code,
+  .markdown-alert {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .mermaid-rendered {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: white !important;
+    border-color: #d1d9e0 !important;
+  }
+
+  /* Callout light-mode colors for print */
+  .markdown-alert-note {
+    border-left-color: #0969da !important;
+    background: rgba(9, 105, 218, 0.08) !important;
+  }
+  .markdown-alert-tip {
+    border-left-color: #1a7f37 !important;
+    background: rgba(26, 127, 55, 0.08) !important;
+  }
+  .markdown-alert-important {
+    border-left-color: #8250df !important;
+    background: rgba(130, 80, 223, 0.08) !important;
+  }
+  .markdown-alert-warning {
+    border-left-color: #9a6700 !important;
+    background: rgba(154, 103, 0, 0.08) !important;
+  }
+  .markdown-alert-caution {
+    border-left-color: #cf222e !important;
+    background: rgba(207, 34, 46, 0.08) !important;
+  }
+
+  /* Show link URLs */
+  .preview-content a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #656d76 !important;
+    word-break: break-all;
+  }
+
+  /* Hide video embeds (can't print those) */
+  .embed-responsive {
+    display: none;
+  }
+
+  /* Page margins */
+  @page {
+    margin: 15mm;
+  }
+}

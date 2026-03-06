@@ -1,0 +1,87 @@
+/* Mermaid diagram styles */
+.mermaid-rendered {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+  padding: 1em;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.mermaid-rendered svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.mermaid-error {
+  margin: 1em 0;
+  padding: 0.75em 1em;
+  background: rgba(207, 34, 46, 0.08);
+  border: 1px solid rgba(207, 34, 46, 0.3);
+  border-radius: 8px;
+  color: #cf222e;
+  font-size: 0.875em;
+  font-family: monospace;
+}
+
+[data-theme="dark"] .mermaid-error {
+  background: rgba(248, 81, 73, 0.1);
+  border-color: rgba(248, 81, 73, 0.3);
+  color: #f85149;
+}
+
+/* Responsive embed container for YouTube etc. */
+.embed-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  margin: 1em 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+
+.embed-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* fallback: preserve whitespace if mermaid hasn't rendered yet */
+/* div.mermaid {
+  white-space: pre;
+  font-family: monospace;
+} */
+
+/* Ensure mermaid containers display correctly */
+.mermaid {
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+.mermaid-rendered {
+  display: flex;
+  justify-content: center;
+}
+
+.mermaid-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  padding: 1em;
+  color: #991b1b;
+  font-family: monospace;
+  white-space: pre-wrap; /* ✅ Preserve formatting in error messages */
+}
+
+.mermaid {
+  white-space: pre; /* Shows if newlines exist in DOM */
+  background: #f0f0f0;
+  font-family: monospace;
+}

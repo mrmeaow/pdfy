@@ -1,0 +1,109 @@
+/* GitHub-style callout/alert blocks */
+.markdown-alert {
+  padding: 0.75em 1em;
+  margin-bottom: 1em;
+  border-left: 4px solid;
+  border-radius: 0 6px 6px 0;
+}
+
+.markdown-alert > :first-child {
+  margin-top: 0;
+}
+
+.markdown-alert > :last-child {
+  margin-bottom: 0;
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 600;
+  margin-bottom: 0.25em;
+}
+
+.markdown-alert .markdown-alert-title svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* NOTE */
+.markdown-alert-note {
+  border-left-color: #0969da;
+  background: rgba(9, 105, 218, 0.08);
+}
+.markdown-alert-note .markdown-alert-title {
+  color: #0969da;
+}
+[data-theme="dark"] .markdown-alert-note {
+  border-left-color: #58a6ff;
+  background: rgba(88, 166, 255, 0.1);
+}
+[data-theme="dark"] .markdown-alert-note .markdown-alert-title {
+  color: #58a6ff;
+}
+
+/* TIP */
+.markdown-alert-tip {
+  border-left-color: #1a7f37;
+  background: rgba(26, 127, 55, 0.08);
+}
+.markdown-alert-tip .markdown-alert-title {
+  color: #1a7f37;
+}
+[data-theme="dark"] .markdown-alert-tip {
+  border-left-color: #3fb950;
+  background: rgba(63, 185, 80, 0.1);
+}
+[data-theme="dark"] .markdown-alert-tip .markdown-alert-title {
+  color: #3fb950;
+}
+
+/* IMPORTANT */
+.markdown-alert-important {
+  border-left-color: #8250df;
+  background: rgba(130, 80, 223, 0.08);
+}
+.markdown-alert-important .markdown-alert-title {
+  color: #8250df;
+}
+[data-theme="dark"] .markdown-alert-important {
+  border-left-color: #a371f7;
+  background: rgba(163, 113, 247, 0.1);
+}
+[data-theme="dark"] .markdown-alert-important .markdown-alert-title {
+  color: #a371f7;
+}
+
+/* WARNING */
+.markdown-alert-warning {
+  border-left-color: #9a6700;
+  background: rgba(154, 103, 0, 0.08);
+}
+.markdown-alert-warning .markdown-alert-title {
+  color: #9a6700;
+}
+[data-theme="dark"] .markdown-alert-warning {
+  border-left-color: #d29922;
+  background: rgba(210, 153, 34, 0.1);
+}
+[data-theme="dark"] .markdown-alert-warning .markdown-alert-title {
+  color: #d29922;
+}
+
+/* CAUTION */
+.markdown-alert-caution {
+  border-left-color: #cf222e;
+  background: rgba(207, 34, 46, 0.08);
+}
+.markdown-alert-caution .markdown-alert-title {
+  color: #cf222e;
+}
+[data-theme="dark"] .markdown-alert-caution {
+  border-left-color: #f85149;
+  background: rgba(248, 81, 73, 0.1);
+}
+[data-theme="dark"] .markdown-alert-caution .markdown-alert-title {
+  color: #f85149;
+}

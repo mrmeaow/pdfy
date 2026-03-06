@@ -1,0 +1,230 @@
+/* GitHub-style markdown preview */
+.preview-content {
+  line-height: 1.7;
+  word-wrap: break-word;
+  color: var(--text-primary);
+}
+
+.preview-content h1,
+.preview-content h2,
+.preview-content h3,
+.preview-content h4,
+.preview-content h5,
+.preview-content h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  line-height: 1.3;
+}
+
+.preview-content h1 {
+  font-size: 2em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.preview-content h2 {
+  font-size: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.preview-content h3 {
+  font-size: 1.25em;
+}
+
+.preview-content h4 {
+  font-size: 1em;
+}
+
+.preview-content h1:first-child,
+.preview-content h2:first-child,
+.preview-content h3:first-child {
+  margin-top: 0;
+}
+
+.preview-content strong {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.preview-content em {
+  font-style: italic;
+}
+
+.preview-content del {
+  text-decoration: line-through;
+}
+
+.preview-content p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.preview-content a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.preview-content a:hover {
+  text-decoration: underline;
+}
+
+.preview-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.preview-content video {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.preview-content blockquote {
+  margin: 0 0 1em;
+  padding: 0.5em 1em;
+  color: var(--text-secondary);
+  border-left: 4px solid var(--border-color);
+  background: var(--bg-secondary);
+  border-radius: 0 6px 6px 0;
+}
+
+.preview-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.preview-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.preview-content table th,
+.preview-content table td {
+  padding: 8px 13px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.preview-content table th {
+  font-weight: 600;
+  background: var(--bg-secondary);
+}
+
+.preview-content table tr:nth-child(even) {
+  background: var(--bg-secondary);
+}
+
+.preview-content code {
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", Monaco, monospace;
+  font-size: 0.875em;
+  padding: 0.2em 0.4em;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.preview-content pre {
+  margin: 0 0 1em;
+  padding: 1em;
+  overflow-x: auto;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+.preview-content pre code {
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.preview-content hr {
+  border: none;
+  border-top: 2px solid var(--border-color);
+  margin: 1.5em 0;
+}
+
+.preview-content ul,
+.preview-content ol {
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+
+.preview-content li {
+  margin-bottom: 0.25em;
+}
+
+.preview-content ul.contains-task-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.preview-content ul.contains-task-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+.preview-content input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 3px;
+  position: relative;
+  top: 2px;
+  flex-shrink: 0;
+}
+
+.preview-content input[type="checkbox"]:checked {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.preview-content input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0;
+  width: 5px;
+  height: 9px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.preview-content details {
+  margin-bottom: 1em;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.5em 1em;
+}
+
+.preview-content details summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.25em 0;
+}
+
+.preview-content details[open] summary {
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5em;
+}
+
+.preview-content kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 0.8em;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 1px 0 var(--border-color);
+  font-family: inherit;
+}

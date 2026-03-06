@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6f8fa;
+  --bg-editor: #ffffff;
+  --bg-preview: #ffffff;
+  --bg-topbar: #f6f8fa;
+  --bg-menu: #ffffff;
+  --bg-menu-hover: #f3f4f6;
+  --text-primary: #1f2328;
+  --text-secondary: #656d76;
+  --text-muted: #8b949e;
+  --border-color: #d1d9e0;
+  --accent-color: #0969da;
+  --resize-handle: #d1d9e0;
+  --resize-handle-hover: #0969da;
+  --scrollbar-thumb: #c1c1c1;
+  --scrollbar-track: transparent;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-editor: #0d1117;
+  --bg-preview: #0d1117;
+  --bg-topbar: #161b22;
+  --bg-menu: #1c2128;
+  --bg-menu-hover: #2d333b;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #656d76;
+  --border-color: #30363d;
+  --accent-color: #58a6ff;
+  --resize-handle: #30363d;
+  --resize-handle-hover: #58a6ff;
+  --scrollbar-thumb: #484f58;
+  --scrollbar-track: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
